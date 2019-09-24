@@ -1,0 +1,38 @@
+The number π\piπ is a mathematical constant. Defined as the ratio of a circle's circumference to its diameter.
+
+Given lll and rrr, your task is to output the lthl^{th}lth digit to the rthr^{th}rth digit of π\piπ after decimal point.
+
+The following is a method to approximate π\piπ, called Liu Hui's π\piπ algorithm.
+https://i.imgur.com/fhNhbRx.png
+
+side length of the regular n-sided polygon in unit circle.
+
+    M6=1
+    M2n2​=2−sqrt(4−Mn2)
+   Dn​ : number of side.
+        D6=6
+        D2n=2Dn
+   An​ : perimeter of regular n-sided polygon in unit circle.
+        An=Mn×Dn
+        lim n → ∞ An = perimeter of unit circle = 2π2\pi2π
+
+Use (Mn,Dn) to compute (M2n,D2n). The larger n is, the closer π you will get.
+
+special requirement : code length should below 1000 charater or you will get a CE.
+
+On the first line there is a single integer TTT indicating the number of test cases.
+
+Each test case contains two integers lll and rrr described above.
+
+    1≤T≤1000
+    1≤l≤r≤10000
+    r−l<10
+
+partial score :
+
+    25% : 1≤l≤r≤10
+    25% : 1≤l≤r≤100
+    25% : 1≤l≤r≤1000
+    25% : 1≤l≤r≤10000
+
+Output T lines, the i th line should contain the output of the i th test case.
